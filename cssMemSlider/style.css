@@ -5,7 +5,7 @@ body {
   margin: 30px auto;
   display: flex;
   flex-direction: column;
-  max-width: 42rem;
+  max-width: 56rem;
 }
 .image {
   width: 400%;
