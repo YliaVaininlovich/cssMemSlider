@@ -74,3 +74,48 @@ body {
   border: 3px solid #2d51c5;
   background: #e7e9ec;
 }
+
+/*--------------------------------*/
+.inner-t {
+  width: 400%;
+  display: flex;
+}
+
+.text {
+  width: 25%;
+}
+#overflow-t {
+  overflow: hidden;
+}
+
+#switch1:checked ~ * h1 {
+  transform: translate(0px, 0);
+}
+#switch2:checked ~ * h1 {
+  margin-left: -100%;
+}
+#switch3:checked ~ * h1 {
+  margin-left: -200%;
+}
+#switch4:checked ~ * h1 {
+  margin-left: -300%;
+}
+h1 {
+  transition: all 0.8s ease-in-out;
+}
+/*-----------------------*/
+@media (max-width: 775px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .wrapper #slides-t {
+    align-self: flex-start;
+  }
+}
