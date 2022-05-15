@@ -1,3 +1,76 @@
 body {
   background: rgb(175, 174, 174);
 }
+#slider {
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+.image {
+  width: 400%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page {
+  width: 25%;
+}
+.page img {
+  width: 100%;
+  height: 70vh;
+  border-radius: 20px;
+}
+
+#overflow {
+  overflow: hidden;
+}
+#slider input {
+  display: none;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+}
+
+#active label {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background: #2d51c5;
+  border: 5px solid rgb(175, 174, 174);
+  display: inline-block;
+  cursor: pointer;
+}
+
+#active label:hover {
+  background: #e7e9ec;
+}
+
+#switch1:checked ~ #slides .image {
+  margin-left: 0%;
+}
+#switch2:checked ~ #slides .image {
+  margin-left: -100%;
+}
+#switch3:checked ~ #slides .image {
+  margin-left: -200%;
+}
+#switch4:checked ~ #slides .image {
+  margin-left: -300%;
+}
+
+#slides .image {
+  transition: all 0.8s ease-in-out;
+}
+#switch1:checked ~ * #active label:nth-child(1),
+#switch2:checked ~ * #active label:nth-child(2),
+#switch3:checked ~ * #active label:nth-child(3),
+#switch4:checked ~ * #active label:nth-child(4) {
+  border: 3px solid #2d51c5;
+  background: #e7e9ec;
+}
